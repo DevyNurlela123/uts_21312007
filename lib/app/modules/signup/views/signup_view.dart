@@ -22,13 +22,13 @@ class SignupView extends GetView<SignupController> {
             TextField(
               controller: controller.cEmail,
               decoration: InputDecoration(
-              labelText: "Email",
+              labelText: "Nama",
               ),
             ),
             TextField(
               controller: controller.cPass,
               decoration: InputDecoration(
-              labelText: "Password",
+              labelText: "Npm",
               ),
             ),
           SizedBox(

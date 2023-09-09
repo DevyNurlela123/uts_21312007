@@ -12,8 +12,10 @@ class LoginView extends GetView<LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login View'),
+        title: Text('Universitas Teknokrat Indonesia'),
         centerTitle: true,
+        backgroundColor: Colors.red,
+        foregroundColor: Colors.white,
       ),
       body: Container(
         padding: EdgeInsets.all(10),
@@ -22,13 +24,13 @@ class LoginView extends GetView<LoginController> {
             TextField(
               controller: controller.cEmail,
               decoration: InputDecoration(
-                labelText: "Email",
+                labelText: "Nama",
               ),
             ),
             TextField(
               controller: controller.cPass,
               decoration: InputDecoration(
-                labelText: "Password",
+                labelText: "Npm",
               ),
             ),
             SizedBox(
@@ -63,6 +65,16 @@ class LoginView extends GetView<LoginController> {
                   onPressed: ()=> Get.toNamed(Routes.SIGNUP), 
                   child: Text("Daftar Disini")),
               ],
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            ElevatedButton(onPressed: () => cAuth.LoginGoogle(),
+              child: Text ("Login with Google"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Color.fromARGB(255, 238, 203, 6),
+                foregroundColor: Colors.white,
+              ),
             ),
           ],
         ),

@@ -10,12 +10,12 @@ late TextEditingController cHarga;
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 Future <DocumentSnapshot<Object?>> GetData(String id) async {
-  DocumentReference docRef = firestore.collection("products").doc(id);
+  DocumentReference docRef = firestore.collection("mahasiswa").doc(id);
 
   return docRef.get();
 }
 void updateProduct(String name, String harga, String id) async{
-  DocumentReference productById = firestore.collection("products").doc(id);
+  DocumentReference productById = firestore.collection("mahasiswa").doc(id);
 
   try {
     await productById.update({
